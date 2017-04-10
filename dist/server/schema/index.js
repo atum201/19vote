@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 var _graphql = require('graphql');
 
 var _Vote = require('./mutations/19Vote');
@@ -11,6 +15,8 @@ var _Vote = require('./mutations/19Vote');
 var _Vote2 = require('./queries/19Vote');
 
 var _constant = require('../common/constant');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var userOnline = []; // [id];
 
@@ -31,12 +37,12 @@ var createSchema = function createSchema(io) {
 
     socket.on('disconnect', function () {
       var uId = socket.userId;
-      _.remove(socker, function (sk) {
+      _lodash2.default.remove(socker, function (sk) {
         return sk.userId == socket.userId && sk.id == socket.id;
       });
-      if (_.findIndex(socker, { userId: uId }) == -1) {
+      if (_lodash2.default.findIndex(socker, { userId: uId }) == -1) {
         socket.broadcast.emit(_constant.SOCKET_BROADCAST_DISCONNECT, uId);
-        _.remove(userOnline, function (id) {
+        _lodash2.default.remove(userOnline, function (id) {
           return id == uId;
         });
       }
