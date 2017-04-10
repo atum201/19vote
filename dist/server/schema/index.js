@@ -10,7 +10,7 @@ var _Vote = require('./mutations/19Vote');
 
 var _Vote2 = require('./queries/19Vote');
 
-require('../common/constant');
+var _constant = require('../common/constant');
 
 var userOnline = []; // [id];
 
@@ -24,7 +24,7 @@ var createSchema = function createSchema(io) {
   var _socket = void 0;
   io.on('connection', function (socket) {
     _socket = socket;
-    socket.on(SOCKET_SEND_CONNECT, function (data) {
+    socket.on(_constant.SOCKET_SEND_CONNECT, function (data) {
       // user {userId}
       console.log(data);
     });
@@ -35,7 +35,7 @@ var createSchema = function createSchema(io) {
         return sk.userId == socket.userId && sk.id == socket.id;
       });
       if (_.findIndex(socker, { userId: uId }) == -1) {
-        socket.broadcast.emit(SOCKET_BROADCAST_DISCONNECT, uId);
+        socket.broadcast.emit(_constant.SOCKET_BROADCAST_DISCONNECT, uId);
         _.remove(userOnline, function (id) {
           return id == uId;
         });

@@ -1,11 +1,9 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var whitelist = ["http://123.30.190.143:7777", "http://123.31.10.29:3000", "123.30.190.143:7777", "123.31.10.29:3000"];
-// let whitelist = ["http://thongtinnoibo.mic.gov.vn","http://my.thongtinnoibo.mic.gov.vn","thongtinnoibo.mic.gov.vn","my.thongtinnoibo.mic.gov.vn"];
-// let whitelist = ["http://localhost:3000","http://localhost:3000/graphql","http://localhost:2000"];
+var whitelist = [];
 
 exports.default = {
   origin: function origin(_origin, callback) {

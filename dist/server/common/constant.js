@@ -3,14 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.default = {
+var voteProp = exports.voteProp = {
 	emprires: ["sang", "asy", "egypt", "hittle", "phonix", "parmy", "summer", "baby", "yamoto", "roman", "persi", "macxe", "mioan", "catha", "choson", "greek"],
 	noidung: ["ramdom", "asy", "sangtudo", "rsang", "honmasang", "yaasy", "ya4"],
 	thethuc: ["solo", "22", "33", "44", "doanthe"],
 	tinhchat: ["giaoluunoibo", "giaoluu", "giaoluuquocte", "giaidaunoibo", "giaidau", "giaidauquocte"],
-	vaitro: ["ongbau", "gamethu", "mod", "chimlontamhuyet", "fan", "nhataitro"]
+	vaitro: ["ongbau", "gamethu", "mod", "chimlontamhuyet", "fan", "nhataitro"] };
 
-};
 var PlayerField = exports.PlayerField = ["shortName"];
 var PalerFieldName = exports.PalerFieldName = ["Tên gọi khác"];
 var CREATE_PLAYER = exports.CREATE_PLAYER = "create player",
