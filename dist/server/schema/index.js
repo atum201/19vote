@@ -21,6 +21,7 @@ var userIds = []; // [userId]
 var socker = []; // socket.userid = id;
 
 var createSchema = function createSchema(io) {
+  var _socket = void 0;
   io.on('connection', function (socket) {
     _socket = socket;
     socket.on(SOCKET_SEND_CONNECT, function (data) {
